@@ -22,7 +22,7 @@
 <body>
 
 	<div class="row justify-content-center mt-4">
-		<div class="col-10 ">
+		<div class="col-md-10 ">
          	<div class="card mt-4  card-outline-secondary ">
             	 <div class="card-header text-start"> 
             <h3>Payment form example </h3> 
@@ -34,41 +34,41 @@
 
        				<form class="container-fluid">
 		           		 <div class="row " > <!--primera fila -->
-                			<div class="col-5 d-flex flex-column mb-3">
+                			<div class="col-sm-5 pb-3 d-flex flex-column mb-3">
                    			 <label for="tarjeta">Card #</label>
                    			 <input id="tarjeta" name="tarjeta" placeholder="XXXXXXXXXXXXX" type="text">
                				</div>
 
-                			<div class="col-3 d-flex flex-column mb-3">
+                			<div class="col-sm-3 pb-3 d-flex flex-column mb-3">
                    			 <label for="codigo">CVV #</label>
                    			 <input type="text" placeholder="0000" id="codigo" name="codigo">
                				 </div>
                         
-                			<div class="col-4 d-flex flex-column  mb-3">
+                			<div class="col-sm-4 pb-3 d-flex flex-column  mb-3">
                   			<label for="cantidad">Amount</label> 
                    			<input id="cantidad" name="cantidad" placeholder="$" type="number"> 
                 			</div>
            			 	</div> <!--cierro primera fila-->
          
             			<div class="row"> <!--segunda fila -->
-                  			 <div class="col-6 d-flex flex-column mb-3">
+                  			 <div class="col-sm-6 pb-3 d-flex flex-column mb-3">
                        		 <label for="nombre">First Name</label>
                        		 <input id="nombre"  name="nombre" type="text">
                    			 </div>
     
-                    		 <div class="col-6 d-flex flex-column mb-3">
+                    		 <div class="col-sm-6 pb-3 d-flex flex-column mb-3">
                       		 <label for="apellido">Last Name</label>
                        		 <input id = "apellido" name="apellido" type="text" >
                    			 </div>
             			</div> <!--cierro segunda fila-->
                                 
             			<div class="row"> <!--tercera fila -->
-                  		  <div class="col-6 d-flex flex-column mb-3">
+                  		  <div class="col-sm-6 pb-3 d-flex flex-column mb-3">
                           <label for="ciudad">City</label>
                        	  <input id="ciudad" name="ciudad"  type="text">
                    		  </div>
     
-                   		  <div class="col-3 d-flex flex-column mb-3">
+                   		  <div class="col-sm-3 pb-3 d-flex flex-column mb-3">
                           <label for="estado">State</label>
                           <select class=" form-control" id="estado" name="estado">
                              <option class="text-white bg-secondary">
@@ -230,37 +230,45 @@
 						  </select>
 					      </div>
                 
-                          <div class="col-3 d-flex flex-column mb-3">
+                          <div class="col-sm-3 pb-3 d-flex flex-column mb-3">
                           <label for="cp">Codigo Postal</label>
                           <input id = "cp" name="cp" type="text" >
                           </div>
             			</div> <!--cierro tercera fila-->  
-                   
-           				<div class="row  justify-content-between"> <!--cuarta fila -->
-               				 <div class="col-3 d-flex flex-column mb-3">
+						
+           				<div class="row  justify-content-between "> <!--cuarta fila -->
+               				 <div class="col-md-4 pb-3 d-flex flex-column mb-3">
                        		 <label for="tarAcept"> We Accept:</label>
                    			 <!--aqui viene en grupo de botones radio para selecc tarjetas-->
-                    		<div class="btn-group "  data-toggle="buttons"> <!--mismo name para selecc solo un radio-button -->
-                        		<label class="btn btn-secondary ">
-                           		<input class="form-check-input" autocomplete="off" checked id="master" name="tarAcept" type="radio">
-                           		<i class="fab fa-cc-mastercard"></i>
-                       			</label> 
-                       			<label class="btn btn-secondary">
-                         		<input class="form-check-input" autocomplete="off" id="visa" name="tarAcept" type="radio">
-                          		<i class="fab fa-cc-visa"></i>
-                       			</label> 
-                       			<label class="btn btn-secondary">
-                          		<input class="form-check-input" autocomplete="off" id="diners" name="tarAcept" type="radio">
-                            	<i class="fab fa-cc-diners-club"></i>
-                       			</label> 
-                       			<label class="btn btn-secondary">
-                          		<input class="form-check-input" autocomplete="off" id="amex" name="tarAcept" type="radio">
-                          		<i class="fab fa-cc-amex"></i>
-                        		</label> 
-                   			</div><!--cierro caja de botones -->
+							
+							 <div class="btn-group form-check-inline  btn-secondary "  data-toggle="buttons"> 
+								<div class="form-check form-check-inline ">
+									<input class="form-check-input"  type="radio" name="tarAcept" id="master" value="option1">
+									<label class="form-check-label" for="master"></label>
+									<i class="fab fa-cc-mastercard"></i>
+								  </div>
+
+								  <div class="form-check form-check-inline">
+									<label class="form-check-label" for="visa"></label>
+									<input class="form-check-input"  type="radio" name="tarAcept" id="visa" value="option1">
+									<i class="fab fa-cc-visa"></i>
+								  </div>
+
+								  <div class="form-check form-check-inline">
+									<label class="form-check-label" for="diners"></label>
+									<input class="form-check-input" type="radio" name="tarAcept" id="diners" value="option1">
+									<i class="fab fa-cc-diners-club"></i>
+								  </div>
+
+								  <div class="form-check form-check-inline ">
+									<label class="form-check-label" for="amex"></label>
+									<input class="form-check-input"  type="radio" name="tarAcept" id="amex" value="option1">
+									<i class="fab fa-cc-amex"></i>
+								  </div>         		 
+                       		</div><!--cierro caja de botones --> 
                 			</div>
                         
-                 			<div class="col-6 d-flex flex-column mb-3">
+                 			<div class="col-md-6 pb-3 d-flex flex-column mb-3">
             					<label for="cp">Messagge</label>
              					<textarea class="form-control"  id = "cp" name="cp"></textarea>
             					<small class="text-muted">Add any notes here.</small>
